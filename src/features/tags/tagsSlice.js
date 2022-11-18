@@ -19,7 +19,7 @@ const tagsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchTags.pending, (state) => {
-          state.isError = false;
+        state.isError = false;
         state.isLoading = true;
       })
       .addCase(fetchTags.fulfilled, (state, action) => {

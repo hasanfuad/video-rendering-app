@@ -5,6 +5,6 @@ import videosReducer from "../features/videos/videosSlice";
 export const store = configureStore({
   reducer: {
     videos: videosReducer,
-    tags: tagsReducer,
+    tags: tagsReducer
   },
 });

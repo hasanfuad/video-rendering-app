@@ -15,7 +15,7 @@ const Tags = () => {
 
   // decide whta to render
   let content;
-  if (tags.length > 0) {
+  // if (tags?.length > 0) {
     if (isLoading) content = <div>Loading...</div>;
 
     if (!isLoading && isError)
@@ -26,7 +26,7 @@ const Tags = () => {
 
     if (!isLoading && !isError && tags?.length > 0)
       content = tags.map((tag) => <Tag key={tag.id} tags={tag} />);
-  }
+  // }
 
   return (
     <>
