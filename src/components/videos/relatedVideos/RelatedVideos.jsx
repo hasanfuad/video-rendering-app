@@ -14,7 +14,7 @@ const RelatedVideos = ({ currentVideoId, tags }) => {
   }, [dispatch, currentVideoId, tags]);
 
   // decide what to render
-  let content;
+  let content = null;
 
   if (isLoading) content = <div>Loading..</div>;
 
@@ -25,7 +25,10 @@ const RelatedVideos = ({ currentVideoId, tags }) => {
 
   if (!isLoading && !isError && relatedVideos?.length > 0)
     content = relatedVideos.map((relatedVideoItem) => (
-      <SingleVideo relatedVideoItem={relatedVideoItem} />
+      <SingleVideo
+        key={relatedVideoItem.id}
+        relatedVideoItem={relatedVideoItem}
+      />
     ));
 
   return (

@@ -1,8 +1,9 @@
 import React from "react";
 import LikeUnlike from "../LikeUnlike/LikeUnlike";
 
-const VideoDescription = ({video}) => {
-  const {title, description, date} = video
+const VideoDescription = ({ video }) => {
+  const { title, description, date, likes, unlikes, id } = video;
+  console.log(video);
   return (
     <>
       <div>
@@ -17,7 +18,7 @@ const VideoDescription = ({video}) => {
           {/* <!-- like/unlike --> */}
 
           <div className="flex gap-10 w-48">
-            <LikeUnlike />
+            <LikeUnlike likes={likes} unlikes={unlikes} id={id} />
           </div>
         </div>
 
